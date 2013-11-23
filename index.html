@@ -27,7 +27,10 @@ td { border: 1px solid silver; padding: 2px 4px; }
 <p><label for="inputFrom">Input</label><input id="inputFrom"></p>
 <p><span class="label">Output</span><span id="outputFrom"></span></p>
 
-<p><button id="showCodes">Show all codes</button></p>
+<h2>Example</h2>
+<p id="toggleCode">In_duckcode_you_can_use_a_comma__ca_full_stop___fs_or_other_punctuation</p>
+
+<p><button id="btnToggleCode">Decode example</button> <button id="btnShowCodes">Show all codes</button></p>
 <p><small>All codes are shown in alphabetical order including aliases, proposed codes etc.</small></p>
 <p id="codes"></p>
 
@@ -50,7 +53,17 @@ $(function () {
 	$('#inputFrom').on('input', function () {
 		$('#outputFrom').html(Duck.decode($(this).val()));
 	});
-	$('#showCodes').on('click', function () {
+	$('#btnToggleCode').click(function () {
+		var $this = $(this);
+		if ($this.html() == 'Encode example') {
+			$this.html('Decode example');
+			$('#toggleCode').duckcode('encode');
+		} else {
+			$this.html('Encode example');
+			$('#toggleCode').duckcode('decode');
+		}
+	});
+	$('#btnShowCodes').on('click', function () {
 		var keys = [];
 		var codes = JSON.parse(JSON.stringify(Duck.codes));
 		codes['_'] = '&nbsp;<code>(space)</code>';
