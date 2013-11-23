@@ -1,12 +1,12 @@
 /**
  * Duck encoding library for JavaScript.
  *
- * @link             https://www.GitHub.com/MrAnchovy/Duck-encoding
- * @version        0.9.1-dev
- * @copyright    JavaScript copyright © 2013 MrAnchovy.
- * @license        [MIT](http://opensource.org/licenses/MIT)
- * @copyright    Duck encoding copyright © 2013 MrAnchovy.
- * @license        [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+ * @link       https://www.GitHub.com/MrAnchovy/Duck-encoding
+ * @version    0.9.1-dev
+ * @copyright  JavaScript copyright © 2013 MrAnchovy.
+ * @license    [MIT](http://opensource.org/licenses/MIT)
+ * @copyright  Duck encoding copyright © 2013 MrAnchovy.
+ * @license    [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
 **/
 
 "use strict;"
@@ -132,6 +132,7 @@ var Duck = {
     }
 };
 
+// jQuery plugin
 if (jQuery) {
     (function ($) {
         $.fn.duckcode = function(action) {
